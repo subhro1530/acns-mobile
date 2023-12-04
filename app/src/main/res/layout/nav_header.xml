@@ -1,0 +1,8 @@
+<!-- res/layout/nav_header.xml -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageViewLogo"
+    android:layout_width="100dp"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:scaleType="centerCrop"
+    android:src="@drawable/full" />
