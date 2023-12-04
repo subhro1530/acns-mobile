@@ -50,69 +50,77 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="#FFFFFF">
+            android:background="#000000">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="fitStart"
-                android:src="@drawable/hero" />
+                android:orientation="vertical">
 
-            <!-- Gif Image Section -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/black">
+                <!-- Your existing ImageView for scrolling image (hero image) -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="661dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/hero" />
 
-                <pl.droidsonroids.gif.GifImageView
-                    android:id="@+id/gifImageView"
+                <!-- Gif Image Section -->
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp"
-                    android:src="@drawable/content1"
-                app:background="@android:color/black" />
+                    android:background="@android:color/black">
 
-                <!-- Text with Font Work Sans -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/gifImageView"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:fontFamily="sans-serif"
-                    android:text="Branding makes a Brand"
-                    android:textColor="#00FFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    <!-- Your existing GifImageView for the GIF image -->
 
-                <!-- Paragraph -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/gifImageView"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="Your paragraph goes here. It can contain additional details about branding."
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp" />
+                    <!-- Text with Font Work Sans -->
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/gifImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/content1"
+                        app:background="@android:color/black" />
 
-                <!-- Right Arrow Image Button -->
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/gifImageView"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/right_arrow_icon" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gifImageView"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Branding makes a Brand"
+                        android:textColor="#00FFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-            </RelativeLayout>
+                    <!-- Paragraph -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gifImageView"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Your paragraph goes here. It can contain additional details about branding."
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <!-- Right Arrow Image Button -->
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gifImageView"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/right_arrow_icon" />
+                </RelativeLayout>
+            </LinearLayout>
         </ScrollView>
+
+
 
         <!-- Add the rest of your layout components below this ScrollView -->
 
@@ -121,7 +129,7 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:background="#181824"
         android:paddingTop="20dp"
